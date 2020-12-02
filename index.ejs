@@ -1,0 +1,10 @@
+<h1>Chat!</h1>
+<form action="/" method="POST">
+  <input type="text" name="sender" />
+  <input type="text" name="message" />
+  <input type="submit" value="Submit!" />
+</form>
+
+<% messages.reverse().slice(0, 5).forEach((item) => { %>
+<p><%= item.sender %>: <%= item.message %></p>
+<% }); %>
